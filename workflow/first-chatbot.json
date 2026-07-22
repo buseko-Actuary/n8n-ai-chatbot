@@ -1,0 +1,86 @@
+{
+  "name": "First Chatbot",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "initialMessages": "Hi there! 👋\nMy name is Nation your AI automation assistant. How can I assist you today?",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ],
+      "id": "3ee9aec4-101f-476c-a7a8-1e3ec6b3867b",
+      "name": "When chat message received",
+      "webhookId": "f5ee5d6e-6a1b-44b1-a816-ecd00c72f25b"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-5.4-nano",
+          "mode": "list",
+          "cachedResultName": "GPT-5.4-NANO"
+        },
+        "responses": {
+          "values": [
+            {
+              "role": "system",
+              "content": "You are the AI assistant for Insight Analytics, an AI and automation consultancy based in Lusaka, Zambia, serving Zambian SMEs.\n\nYour role:\n- Greet visitors warmly and find out what business problem they're trying to solve (e.g. manual processes, slow customer response, disorganized records, repetitive admin work).\n- Briefly explain how Insight Analytics can help: custom automation workflows, AI-powered tools (like resume screening, invoicing, WhatsApp assistants), and Excel-based systems tailored to their business.\n- Keep responses short and conversational — this is a WhatsApp-style chat, not an essay. 2-4 sentences per reply unless asked for detail.\n- Use simple, clear language. Avoid technical jargon unless the user demonstrates technical familiarity.\n- If pricing comes up, explain that engagements are retainer-based and mention that a quick call is the best way to scope their specific needs — don't quote numbers.\n- Always try to capture the lead's name, business name, and the problem they want solved, so it can be logged.\n- If you don't know something specific about current projects or pricing, say a team member will follow up rather than guessing.\n- Stay professional but friendly — reflect a local, approachable tone rather than a generic corporate one.\n\nNever invent client names, case studies, or pricing figures that haven't been provided to you."
+            },
+            {
+              "content": "={{ $json.chatInput }}"
+            }
+          ]
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 2.3,
+      "position": [
+        256,
+        0
+      ],
+      "id": "7a44488d-679f-4539-aae1-b961fae35a93",
+      "name": "Message a model",
+      "credentials": {
+        "openAiApi": {
+          "id": "zUnhuv9XNizzYVQQ",
+          "name": "OpenAI account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "0f3213bf-68fa-41c3-aaa4-b680b9fe3758",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "b9f2bc5b494f5cfca90edd34464499cb1fef971846933341ef7d5868afd6a3ae"
+  },
+  "nodeGroups": [],
+  "id": "WCEFpfunfaLyC2go",
+  "tags": []
+}
