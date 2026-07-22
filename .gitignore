@@ -1,0 +1,23 @@
+# Secrets and environment
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+secrets.json
+
+# n8n local data
+.n8n/
+n8n-data/
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
