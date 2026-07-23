@@ -210,16 +210,18 @@ The roadmap is deliberate, and each item is its own milestone:
 
 ## About This Repo
 
-This is part of an ongoing effort to build practical, business-focused automation systems and document them to a professional standard. Not a portfolio of toys — a growing record of real problems solved with AI and workflow automation, aimed squarely at the businesses that stand to gain the most.
+This project was designed, built, and documented by **Buseko Fungamwango** as part of a personal portfolio of practical, business-focused automation systems. The demo assistant is modelled on a real consultancy (Insight Analytics) as a realistic example use case, but the workflow, code, and documentation here are my own work. Not a portfolio of toys — a growing record of real problems solved with AI and workflow automation.
 
 ---
 
 ## Contact
 
-**Buseko Fungamwango** — AI & Automation Engineer, Insight Analytics
+**Buseko Fungamwango** — AI & Automation Engineer
+
+Built and maintained by me as a personal project.
 
 - GitHub: [@buseko-Actuary](https://github.com/buseko-Actuary)
-- Company: Insight Analytics (Lusaka, Zambia) — turning data and repetitive work into automated systems
+- Founder of Insight Analytics (Lusaka, Zambia), the consultancy used as the example business in this demo
 
 ---
 
