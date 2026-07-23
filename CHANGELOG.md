@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
+### Changed
+- Tightened the AI Agent's system prompt (`workflow/ai-agent-lead-capture.json`): removed em dashes to match brand voice guidelines, added explicit criteria for classifying `buyer_type` as serious vs. casual, added email to the fields the agent always tries to capture, and shortened the target reply length for a warmer, chat-like feel.
 
 ## [0.2.0] - 2026-07-23
 ### Added
